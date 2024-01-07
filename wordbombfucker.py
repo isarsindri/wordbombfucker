@@ -5,9 +5,9 @@ __      _____  _ __ __| | |__   ___  _ __ ___ | |__ | |_ _   _  ___| | _____ _ _
  \ V  V / (_) | | | (_| | |_) | (_) | | | | | | |_) | | | |_| | (__|   <  __/ |   
   \_/\_/ \___/|_|  \__,_|_.__/ \___/|_| |_| |_|_.__/|_|  \__,_|\___|_|\_\___|_|   '''
                                                                                   
-print(str)
-print("\nMade by @isarsindri")
-print("github.com/isarsindri")
+print(str) # printing credits
+print("\nMade by @isarsindri") # printing credits
+print("github.com/isarsindri") # printing credits
 
 
 import tkinter as tk
@@ -64,26 +64,26 @@ def show_word_list(event=None):
     result_window.update_content(sort_words(result_window.new_word_entry.get()))
 
 
-# Create the main window
+# Creating the main window
 window = tk.Tk()
-window.title("WordbombFucker")
-window.configure(bg='white')
-window.geometry("600x630")  # Larger window size
+window.title("WordbombFucker") #window title
+window.configure(bg='white') # window background
+window.geometry("600x630")  # window size
 
-# Create and place the button to trigger word sorting
+# Create and place the button to trigger the word-finding
 button = tk.Button(window, text="Find Words", command=show_word_list)
 button.pack(pady=10)
 
-# Create an instance of the ResultWindow class
+# Creating an instance of the ResultWindow class
 result_window = ResultWindow(window)
 
-extra_label = tk.Label(window, text="github.com/isarsindri", font=("Georgia", 20), bg='white')
+extra_label = tk.Label(window, text="github.com/isarsindri", font=("Georgia", 20), bg='white') # extra label for credit
 extra_label.pack(pady=5)
 
-extra_label2 = tk.Label(window, text="https://discord.gg/WFc3gKDGxB", font=("Georgia, 10"), bg='white')
+extra_label2 = tk.Label(window, text="https://discord.gg/WFc3gKDGxB", font=("Georgia, 10"), bg='white') # extra label for discord server
 extra_label2.pack(pady=5)
 
-window.bind('<Return>', lambda event: show_word_list())
+window.bind('<Return>', lambda event: show_word_list()) # Binding the return bind to tthe window and the event show_word_list
 
-# Start the Tkinter main loop
+# Starting the Tkinter main loop
 window.mainloop()
